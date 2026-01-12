@@ -1,0 +1,41 @@
+proxies:
+  - name: "易澄-云节点792531402-clone-clone (1)"
+    type: vmess
+    server: www.visa.com.hk
+    port: 8443
+    uuid: f1d96bab-edf4-40b1-bb8a-bfcca7b3278f
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /1414
+      headers:
+        Host: v2vv.544244.xyz
+
+  - name: "易澄-云节点792531402-clone (2)"
+    type: vmess
+    server: cf.877774.xyz
+    port: 8443
+    uuid: f1d96bab-edf4-40b1-bb8a-bfcca7b3278f
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /1414
+      headers:
+        Host: v2v2.544244.xyz
+
+proxy-groups:
+  - name: "Auto"
+    type: select
+    proxies:
+      - "易澄-云节点792531402-clone-clone (1)"
+      - "易澄-云节点792531402-clone (2)"
+      - DIRECT
+
+rules:
+  - MATCH,Auto
