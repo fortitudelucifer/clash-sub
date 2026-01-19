@@ -29,20 +29,17 @@ proxies:
       headers:
         Host: v2v2.544244.xyz
 
-        # vmess 节点 — test
+  # 新合并：vmess://... (ps=test)
   - name: "test"
     type: vmess
-    server: "216.173.64.59"
+    server: 216.173.64.59
     port: 27172
-    uuid: "7eb7259b-ce32-48d1-ebf7-e4784e01184b"
+    uuid: 7eb7259b-ce32-48d1-ebf7-e4784e01184b
     alterId: 0
     cipher: auto
     network: tcp
     tls: false
     udp: true
-    ws-opts:
-      path: ""
-      headers: {}
 
 proxy-groups:
   - name: "Auto"
@@ -50,7 +47,9 @@ proxy-groups:
     proxies:
       - "易澄-云节点792531402-clone-clone (1)"
       - "易澄-云节点792531402-clone (2)"
+      - "test"
       - DIRECT
 
 rules:
   - MATCH,Auto
+
