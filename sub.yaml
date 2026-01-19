@@ -29,6 +29,21 @@ proxies:
       headers:
         Host: v2v2.544244.xyz
 
+        # vmess 节点 — test
+  - name: "test"
+    type: vmess
+    server: "216.173.64.59"
+    port: 27172
+    uuid: "7eb7259b-ce32-48d1-ebf7-e4784e01184b"
+    alterId: 0
+    cipher: auto
+    network: tcp
+    tls: false
+    udp: true
+    ws-opts:
+      path: ""
+      headers: {}
+
 proxy-groups:
   - name: "Auto"
     type: select
